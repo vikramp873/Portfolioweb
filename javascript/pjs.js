@@ -55,3 +55,21 @@ sr.reveal(".work__img", { interval: 400 });
 
 /*SCROLL CONTACT*/
 sr.reveal(".contact__input", { interval: 100 });
+
+
+
+const cookieContainer = document.querySelector('.cookie'),
+ cookieBtn = document.querySelector('.btn');
+
+ cookieBtn.addEventListener('click',  () => {
+   cookieContainer.classList.remove('active');
+   localStorage.setItem('cookieConsentCreated', "true")
+   
+})
+
+setTimeout(() => {
+  if(!localStorage.getItem('cookieConsentCreated')){
+  cookieContainer.classList.add('active');
+  }
+  
+}, 2000)

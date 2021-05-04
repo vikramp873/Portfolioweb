@@ -221,12 +221,22 @@ img {
   right: 0;
   bottom: 0;
   width: 295px;
+  padding: 20px;
 }
 
 /*BUTTONS*/
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+    background: var(--first-color);
+  color: #fff;
+  padding: 0.75rem 2.5rem;
+  font-weight: var(--font-semi);
+  border-radius: 0.5rem;
+}
+
+.button1 {
+  display: inline-block;
+  background: var(--first-color);
   color: #fff;
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
@@ -318,7 +328,7 @@ img {
   overflow: hidden;
 }
 .work__img img {
-  transition: 1s;
+  transition: 2s;
   cursor: pointer;
 }
 .work__img img:hover {
@@ -420,7 +430,47 @@ img {
   .home__img {
     width: 457px;
     bottom: 15%;
+    right: 15%;
+    padding: 20px;
   }
+
+  #button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 
   .about__container,
   .skills__container {
@@ -442,6 +492,52 @@ img {
   .contact__container {
     justify-items: center;
   }
+}
+
+.footer a{
+  color: #fff;
+}
+
+ .cookie{
+   background-color: darkblue;
+   color:white;
+   padding:20px 25px;
+   position: fixed;
+   left:24px;
+   right:24px;
+   max-width: 900px;
+   margin: 0 auto;
+   bottom:-100;
+   border-radius: 8px 8px 0 0;
+   box-shadow: 2px -8px 18px rgba(0, 0, 139, 0.558);
+   transition: all ease 0.8s;
+   overflow: hidden;
+ }
+
+ .cookie.active{
+    bottom: 0;  
+ }
+
+ .cookie p{
+   color: #fff;
+   text-decoration: none;
+ }
+
+ .cookie a{
+   text-decoration: underline;
+   color: #fff;
+ }
+ 
+
+  
+ .cookie .btn{
+   padding: 10px 30px;
+   background: orangered;
+   color: #fff;
+   border: none;
+   border-radius: 10px  ;
+   margin-top: 10px;
+   cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
